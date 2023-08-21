@@ -5,8 +5,10 @@
     "sourceMap": false,
     "moduleResolution": "Node",
     "skipLibCheck": true,
+    "resolveJsonModule": true,
     "strict": true,
     "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
     "types": ["node"],
     "baseUrl": "."
   },
