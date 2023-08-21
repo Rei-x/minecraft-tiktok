@@ -1,12 +1,8 @@
 name: Release
 on:
-  workflow_call:
-    inputs:
-      dry-run:
-        description: 'Compiles the app but not upload artifacts to distribution server'
-        default: false
-        required: false
-        type: boolean
+  push:
+    branches:
+      - main
 
 concurrency:
   group: release-${{ github.ref }}
