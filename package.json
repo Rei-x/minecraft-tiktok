@@ -14,7 +14,7 @@
     "build:main": "cd ./packages/main && vite build",
     "build:preload": "cd ./packages/preload && vite build",
     "build:renderer": "cd ./packages/renderer && vite build",
-    "compile": "cross-env MODE=production npm run build && electron-builder build --config .electron-builder.config.js --dir",
+    "compile": "cross-env MODE=production npm run build && electron-builder build --config .electron-builder.config.js",
     "test": "npm run test:main && npm run test:preload && npm run test:renderer && npm run test:e2e",
     "test:e2e": "npm run build && vitest run",
     "test:main": "vitest run -r packages/main --passWithNoTests",
@@ -47,13 +47,7 @@
     "typescript": "5.1.6",
     "unplugin-auto-expose": "0.0.5",
     "vite": "4.4.9",
-    "vitest": "0.34.1"
-  },
-  "dependencies": {
-    "@chakra-ui/react": "^2.8.0",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "electron-updater": "6.1.1",
+    "vitest": "0.34.1",
     "fets": "^0.4.11",
     "framer-motion": "^10.15.1",
     "interprocess": "^0.2.6",
@@ -61,6 +55,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.2",
-    "tiktok-live-connector": "^1.0.3"
+    "tiktok-live-connector": "^1.0.3",
+    "@chakra-ui/react": "^2.8.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0"
+  },
+  "dependencies": {
+    "electron-updater": "6.1.1"
   }
 }
